@@ -1,20 +1,20 @@
+name: Deploy to production
+
 on:
   push:
     branches:
-      - main
-name: Deploy website on push
+      - master
+
 jobs:
-  web-deploy:
-    name: Deploy
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Get latest code
-      uses: actions/checkout@main
-    - name: Push files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: jerry.iit.uni-miskolc.hu
-        username: slyizs
-        password: ${{ secrets.ftp_password }}
-        protocol: sftp
-        port: 22
+      - uses: actions/checkout@v2
+      - uses: contention/rsync-deployments@v2.0.0
+        with:
+          EXCLUDES: --exclude .htaccess --exclude /uploads/
+          USER: slyizs
+          HOST: jerry.iit.uni-miskolc.hu
+          LOCALPATH: /dist/
+          REMOTEPATH: /home/stud2020/slyizs/public_html
+          DEPLOY_KEY: ${{ secrets.ftp_password }}
