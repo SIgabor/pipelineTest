@@ -12,7 +12,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: contention/rsync-deployments@v2.0.0
         with:
-          EXCLUDES: --exclude .htaccess --exclude /uploads/
           USER: slyizs
           HOST: jerry.iit.uni-miskolc.hu
           LOCALPATH: /dist/
