@@ -16,4 +16,5 @@ jobs:
         server: jerry.iit.uni-miskolc.hu
         username: slyizs
         password: ${{ secrets.ftp_password }}
+        protocol: sftp
         port: 22
