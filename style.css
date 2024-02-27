@@ -1,0 +1,102 @@
+*{
+    border: 0px solid red;
+}
+
+body{
+    margin: 0px;
+    background-image: url("./assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size:cover; 
+}
+
+ul{
+    list-style-type: none;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(39, 39, 39, 0.3);
+    border-radius: 60px;
+    backdrop-filter: blur(4px);
+    width: clamp(1000px, 70%, 1500px);
+    position: relative;
+    
+}
+li{
+    float: right;
+}
+
+li a{
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px 20px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 60px;
+}
+
+li a:hover {
+    background-color: rgba(189, 189, 189, 0.3);
+}
+
+h1{
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+p{
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.active{
+    background-color: rgba(189, 189, 189, 0.3);
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+.section-one{
+    display: flex;
+    justify-content: center;
+}
+.introduction{
+    background-color: rgba(39, 39, 39, 0.3);
+    border-radius: 60px;
+    backdrop-filter: blur(4px);
+    width: clamp(1000px, 70%, 1500px);
+
+}
+.text{
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    padding: 15px;
+}
+
+.nav-left{
+    float: left;
+}
+
+.name{
+    margin: 0;
+}
+
+.nameUnder{
+    margin: 0;
+    padding-left: 30px;
+    text-align: end;
+}
+
+.nameDiv{
+
+    color: whitesmoke;
+    padding-left: 10px;
+    margin-top:15px;
+    margin-left: 15px;
+}
