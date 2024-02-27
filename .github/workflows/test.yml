@@ -10,10 +10,9 @@ jobs:
     steps:
     - name: Get latest code
       uses: actions/checkout@main
-
     - name: Push files
       uses: SamKirkland/FTP-Deploy-Action@v4.0.0
       with:
-        server: ftp.jerry.iit.uni-miskolc.hu
+        server: jerry.iit.uni-miskolc.hu
         username: slyizs
         password: ${{ secrets.ftp_password }}
