@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@main
 
     - name: Push files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: SamKirkland/FTP-Deploy-Action@v4.0.0
       with:
         server: jerry.iit.uni-miskolc.hu
         username: slyizs
